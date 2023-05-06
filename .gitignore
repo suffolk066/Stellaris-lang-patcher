@@ -1,0 +1,6 @@
+/.idea
+/build
+/dist
+/gitignore.txt
+/lang.spec
+/venv
