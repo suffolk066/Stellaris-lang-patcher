@@ -53,8 +53,8 @@ class MyWidget(QWidget):
                 print(f'현재 경로 : {english_loc_path}')
 
                 for loc_file in os.listdir(english_loc_path):
-                    if re.search(r'.+english\.yml', loc_file):
-                        new_file_name = loc_file.replace('english.yml', 'korean.yml')
+                    if re.search(r'.+english\.yml', loc_file) or re.search(r'english.+\.yml', loc_file):
+                        new_file_name = loc_file.replace('english.yml', 'korean.yml').replace('english', 'korean')
                         old_file_path = os.path.join(english_loc_path, loc_file)
                         new_file_path = os.path.join(korean_loc_path, new_file_name)
 
